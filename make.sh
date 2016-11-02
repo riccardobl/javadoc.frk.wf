@@ -6,7 +6,8 @@ fi
 
 SWIFT_BIN=`which swift`
 OPENSSL_BIN=`which openssl`
-
+GRIP_BIN=`which grip`
+CURR_DIR=$PWD
 if [ "$OPENSSL_BIN" == "" ];
 then
     sudo apt-get install  -y  openssl
@@ -19,6 +20,13 @@ then
     sudo pip install python-swiftclient python-keystoneclient
     SWIFT_BIN=`which swift`
 fi
+
+if [ "$SWIFT_BIN" == "" ];
+then
+    sudo pip install grip
+    GRIP_BIN=`which grip`
+fi
+
 
 rm -Rf $OUT_DIR
 mkdir -p $OUT_DIR
@@ -35,6 +43,9 @@ do
     chmod +x $file
     $file $OUT_DIR $TMP_DIR
 done
+
+cd $CURR_DIR
+$GRIP_BIN Index.md --export $OUT_DIR/index.html
 
 cd $OUT_DIR
 $SWIFT_BIN -V 2.0 upload $TARGET_CONTAINER *   --skip-identical
