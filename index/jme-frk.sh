@@ -24,5 +24,5 @@ $GIT_BIN pull origin frk
 ./gradlew mergedJavadoc
 cp -Rf  dist/javadoc  $CURR_DIR/$OUT_DIR/jmonkeyengine/frk
 $GIT_BIN reset --hard HEAD
-echo "<a href='frk/index.html'>frk</a><br />" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/index.html
+echo "<a href='jmonkeyengine/frk/index.html'>frk</a><br />" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/index.html
 
