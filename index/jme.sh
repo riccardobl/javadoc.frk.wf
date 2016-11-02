@@ -35,7 +35,7 @@ $ANT_BIN javadoc
 cp -Rf dist/javadoc $CURR_DIR/$OUT_DIR/jmonkeyengine/3.0
 $GIT_BIN  reset --hard HEAD
 echo "<a href='jmonkeyengine/3.0/index.html'>3.0</a><br />" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/index.html
-echo "Allow: /jmonkeyengine/3.0/*" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/robots.txt
+echo "Allow: /jmonkeyengine/3.0/*" >> $CURR_DIR/$OUT_DIR/robots.txt
 
 $GIT_BIN checkout v3.1
 $GIT_BIN  pull origin v3.1
@@ -43,7 +43,7 @@ $GIT_BIN  pull origin v3.1
 cp -Rf  dist/javadoc  $CURR_DIR/$OUT_DIR/jmonkeyengine/3.1
 $GIT_BIN  reset --hard HEAD
 echo "<a href='jmonkeyengine/3.1/index.html'>3.1</a><br />" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/index.html
-echo "Allow: /jmonkeyengine/3.1/*" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/robots.txt
+echo "Allow: /jmonkeyengine/3.1/*" >> $CURR_DIR/$OUT_DIR/robots.txt
 
 
 $GIT_BIN checkout PBRisComing
@@ -52,7 +52,7 @@ $GIT_BIN  pull origin PBRisComing
 cp -Rf  dist/javadoc  $CURR_DIR/$OUT_DIR/jmonkeyengine/PBRisComing
 $GIT_BIN  reset --hard HEAD
 echo "<a href='jmonkeyengine/PBRisComing/index.html'>PBRisComing</a><br />" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/index.html
-echo "Allow: /jmonkeyengine/PBRisComing/*" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/robots.txt
+echo "Allow: /jmonkeyengine/PBRisComing/*" >> $CURR_DIR/$OUT_DIR/robots.txt
 
 
 $GIT_BIN checkout master
@@ -61,5 +61,5 @@ $GIT_BIN  pull origin master
 cp -Rf dist/javadoc $CURR_DIR/$OUT_DIR/jmonkeyengine/master
 $GIT_BIN  reset --hard HEAD
 echo "<a href='jmonkeyengine/master/index.html'>master</a><br />" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/index.html
-echo "Allow: /jmonkeyengine/master/*" >> $CURR_DIR/$OUT_DIR/jmonkeyengine/robots.txt
+echo "Allow: /jmonkeyengine/master/*" >> $CURR_DIR/$OUT_DIR/robots.txt
 
