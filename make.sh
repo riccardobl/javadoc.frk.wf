@@ -21,7 +21,7 @@ then
     SWIFT_BIN=`which swift`
 fi
 
-if [ "$SWIFT_BIN" == "" ];
+if [ "$GRIP_BIN" == "" ];
 then
     sudo pip install grip
     GRIP_BIN=`which grip`
