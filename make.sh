@@ -38,4 +38,8 @@ done
 
 cd $OUT_DIR
 $SWIFT_BIN -V 2.0 upload $TARGET_CONTAINER *   --skip-identical
+$SWIFT_BIN post $TARGET_CONTAINER --read-acl ".r:*"
+$SWIFT_BIN post --header "X-Container-Meta-Web-Index: index.html"  $TARGET_CONTAINER
+$SWIFT_BIN post --header "X-Container-Meta-Web-Listings: false" $TARGET_CONTAINER
+
 echo "Done!"
